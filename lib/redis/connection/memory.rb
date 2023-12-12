@@ -1,6 +1,6 @@
 require 'set'
-require 'redis/connection/registry'
-require 'redis/connection/command_helper'
+# require 'redis/connection/registry'
+# require 'redis/connection/command_helper'
 require "fakeredis/command_executor"
 require "fakeredis/expiring_hash"
 require "fakeredis/sort_method"
@@ -17,7 +17,7 @@ class Redis
     DEFAULT_REDIS_VERSION = '5.0.9'
 
     class Memory
-      include Redis::Connection::CommandHelper
+      # include Redis::Connection::CommandHelper
       include FakeRedis
       include SortMethod
       include TransactionCommands
